@@ -1,0 +1,7 @@
+extends ../layout/lauOut.pug
+
+block content
+	h1 hi
+		form(action='/user/search',method='GET')
+				input(type='text',name='q')
+				button Search

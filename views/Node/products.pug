@@ -1,0 +1,10 @@
+extends ../layout/lauOut.pug
+
+block content
+		each producted in products
+			.row
+				.col-lg-12(style='border:1px solid black')
+					p= producted.name
+					img(style='height:50px' src=producted.img)
+					p= producted.description
+					a(href='/cart/add/' +producted.id) add cart

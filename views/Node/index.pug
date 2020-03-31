@@ -1,0 +1,15 @@
+extends ../layout/lauOut.pug
+
+block content
+	h1 hi
+		form(action='/user/search',method='GET')
+				input(type='text',name='q')
+				button Search
+		ul
+			each user in users
+				li
+				p= user.name
+				p= user.phone
+				a(href='/user/' + user.id) View
+
+		a(href="/user/create") name

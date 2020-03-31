@@ -1,0 +1,10 @@
+extends ../layout/lauOut.pug
+
+block content
+	if errors
+		each er in errors
+			.alert.alert-danger= er
+	form(action="/user/create", method="POST")
+		input(type="text",name="name",value = val ? val.name : '')
+		input(type="text",name="phone",value = val ? val.phone : '')
+		button create
